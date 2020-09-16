@@ -1,46 +1,31 @@
 // 모의고사
 
-// plyaer method
+// 수포자별 푸는 방법
 function pm(player, idx){
-    // 수포자별 푸는 방법
+
     const m = [   
         [1, 2, 3, 4, 5],
         [2, 1, 2, 3, 2, 4, 2, 5],
         [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     ]
 
-
+    const mp = m[player]
+    return mp[idx%mp.length]
 }
 
-function p1(n){
-    return n%5 + 1
+const rp1 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+const rp2 = [2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5]
+const rp3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5]
+
+function equals(rst, p){
+    for(let i = 0, len = rst.length; i < len; i++){
+        if (rst[i] != pm(p,i)) console.log(i, rst[i], pm(p,i))
+    }    
 }
 
-function p2(n){
-    if ( n % 2 == 0) return 2
-    const n8 = ( n % 8 + 1 ) / 2
-    return ( n8 == 1) ? 1 : n8 + 1
-}
-
-function p3(n){
-    const n10 = parseInt( n % 10 / 2 ) 
-    if ( n10 === 0 ) return 3
-    return ( n10 > 2 ) ? n10+1 : n10
-}
-
-// function equals( rst, f){
-//     for(let i = 0, len = rst.length; i < len; i++){
-//         if (rst[i] != f(i)) console.log(rst[i], f(i))
-//     }    
-// }
-
-// const rp1 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-// const rp2 = [2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5]
-// const rp3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5]
-
-// equals(rp1, p1)
-// equals(rp2, p2)
-// equals(rp3, p3)
+equals(rp1, 0)
+equals(rp2, 1)
+equals(rp3, 2)
 
 //log = console.log
 
@@ -78,17 +63,17 @@ function arrayEquals(a, b) {
         a.every((val, index) => val === b[index]);
 }
 
-data_list.forEach(element => {
+// data_list.forEach(element => {
 
-    const data   = element[0]
-    const result = element[1]
+//     const data   = element[0]
+//     const result = element[1]
 
-    //const data_rst = solution(data)
+//     const data_rst = solution(data)
 
-    if ( !arrayEquals(data_rst, result)) {
-        console.log("=== error ===")
-        console.log(data)
-        console.log(result)
-        console.log(data_rst)
-    }
-});
+//     if ( !arrayEquals(data_rst, result)) {
+//         console.log("=== error ===")
+//         console.log(data)
+//         console.log(result)
+//         console.log(data_rst)
+//     }
+// });
