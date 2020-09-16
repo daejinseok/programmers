@@ -2,6 +2,13 @@
 
 // plyaer method
 function pm(player, idx){
+    // 수포자별 푸는 방법
+    const m = [   
+        [1, 2, 3, 4, 5],
+        [2, 1, 2, 3, 2, 4, 2, 5],
+        [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    ]
+
 
 }
 
@@ -76,7 +83,7 @@ data_list.forEach(element => {
     const data   = element[0]
     const result = element[1]
 
-    const data_rst = solution(data)
+    //const data_rst = solution(data)
 
     if ( !arrayEquals(data_rst, result)) {
         console.log("=== error ===")
