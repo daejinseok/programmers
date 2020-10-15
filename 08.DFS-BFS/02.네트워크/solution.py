@@ -14,7 +14,7 @@ def walk(i):
 
     v[i] = count
 
-    for j in range(i+1, N):
+    for j in range(N):
         if coms[i][j] == 1 :
             walk(j)
 
@@ -30,13 +30,13 @@ def solution(n, computers):
     count = 0
 
     for i in range(n):
-
         if walk(i) :
             count = count + 1
 
-
     return count
 
+print(solution(3, [[1, 0, 0], [0, 1, 0], [0, 0, 1]]))
 print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
 print(solution(3, [[1, 1, 0], [1, 1, 1], [0, 1, 1]]))
+print(solution(4, [[1, 0, 0, 1], [0, 1, 1, 0], [0, 1, 1, 0], [1, 1, 0, 1]]))
 
