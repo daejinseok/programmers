@@ -1,6 +1,8 @@
 # 단어 변환
 # https://programmers.co.kr/learn/courses/30/lessons/43163?language=python3
 
+
+
 def is_one_diff(a, b):
     """
     >>> is_one_diff('abc', 'abc')
@@ -46,6 +48,8 @@ def solution(begin, target, words):
                 q.put((d+1, w2))
                 words.remove(w2)
     return d
+
+
 
 import doctest
 doctest.testmod()
