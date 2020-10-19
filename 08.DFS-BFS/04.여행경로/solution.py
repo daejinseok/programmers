@@ -10,8 +10,24 @@ def solution(tickets):
     ['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO']
     """
 
-    answer = []
-    return answer
+    ts = tickets.sort()
+    N = len(len(ts))
+
+    def _walk(used, remain):
+
+
+
+
+    for i in range(N):
+        used = set(i)
+        remain = set(range(N))
+        remain.remove(i)
+        all = _walk(set(i), remain)
+
+        if all != None :
+            break
+            
+    return all
 
 
 
