@@ -10,6 +10,15 @@ def solution(tickets):
     ['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO']
     """
 
+    ts = tickets.sort()
+    v = [False] * len(ts)
+
+    def travel(i):
+
+        t[1]
+
+
+
     answer = []
     return answer
 
